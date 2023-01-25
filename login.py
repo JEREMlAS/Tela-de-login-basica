@@ -1,17 +1,27 @@
 from tkinter import *
+
+def liberado():
+    janela2 = Tk()
+    janela2.title('Liberado')
+    janela2.geometry('200x200')
+    ok = Label(janela2, text='LIBERADO')
+    ok.place(x=50, y=50)
+
 def pegar_entrada():
     a = entrada1.get()
     b = entrada2.get()
     if a == 'Pedro' and b == '1234':
         acesso['text'] = 'Permitido'
         acesso['foreground'] = 'darkgreen'
+        liberado()
     else:
         acesso['text'] = 'senha e/ou \nlogin incorretos'
         acesso['foreground'] = 'red'
+
 #Janela
 janela = Tk()
 janela.title("Teste da Bagaça")
-janela.geometry("400x400")
+janela.geometry('240x300')
 janela.config(background='white')
 #Texto
 texto = Label(janela, text='Tela de login', bg='white')
